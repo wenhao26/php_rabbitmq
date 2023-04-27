@@ -1,0 +1,14 @@
+2023-04-26 10:46:34 pid:1 PhpAmqpLib\Exception\AMQPProtocolChannelException: NOT_FOUND - no exchange 'exchange_name' in vhost '/' in D:\u-road\RbbitMQNewTest\vendor\php-amqplib\php-amqplib\PhpAmqpLib\Channel\AMQPChannel.php:224
+Stack trace:
+#0 [internal function]: PhpAmqpLib\Channel\AMQPChannel->channel_close(Object(PhpAmqpLib\Wire\AMQPBufferReader))
+#1 D:\u-road\RbbitMQNewTest\vendor\php-amqplib\php-amqplib\PhpAmqpLib\Channel\AbstractChannel.php(214): call_user_func(Array, Object(PhpAmqpLib\Wire\AMQPBufferReader))
+#2 D:\u-road\RbbitMQNewTest\vendor\php-amqplib\php-amqplib\PhpAmqpLib\Channel\AbstractChannel.php(363): PhpAmqpLib\Channel\AbstractChannel->dispatch('20,40', '\x01\x944NOT_FOUND - ...', NULL)
+#3 D:\u-road\RbbitMQNewTest\vendor\php-amqplib\php-amqplib\PhpAmqpLib\Channel\AMQPChannel.php(584): PhpAmqpLib\Channel\AbstractChannel->wait(Array, false, 0)
+#4 D:\u-road\RbbitMQNewTest\retryCWorkerMan.php(42): PhpAmqpLib\Channel\AMQPChannel->queue_bind('queuePrefix_Que...', 'exchange_name', 'queuePrefix_Que...')
+#5 D:\u-road\RbbitMQNewTest\vendor\workerman\workerman\Worker.php(2488): retryCWorkerMan->{closure}(Object(Workerman\Worker))
+#6 D:\u-road\RbbitMQNewTest\vendor\workerman\workerman\Worker.php(1478): Workerman\Worker->run()
+#7 D:\u-road\RbbitMQNewTest\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#8 D:\u-road\RbbitMQNewTest\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#9 D:\u-road\RbbitMQNewTest\retryCWorkerMan.php(68): Workerman\Worker::runAll()
+#10 D:\u-road\RbbitMQNewTest\retryCWorkerMan.php(73): retryCWorkerMan->retryCDade()
+#11 {main}
