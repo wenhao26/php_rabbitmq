@@ -2,7 +2,7 @@
 
 #### 1.Rbbitmq 是基于 Erlang 下运行的，需要下载https://www.erlang.org/downloads 对应的otp版本
 
-![img_4.png](img_4.png)
+![img_4.png](image\img_4.png)
 
 #### 下载后直接运行，下一步，选择没有中文的目录下安装，并配置系统环境变量
 
